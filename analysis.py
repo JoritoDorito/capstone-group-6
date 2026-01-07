@@ -1,10 +1,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-set_id = "_1000to1050"
+set_id = "_1000to1050"  # the set that was used as test set in the cnn file
 #set_id = "0"
 #set_id = "_test"
-result_id = "_test"
+result_id = "_test"  # we want to look at the performance on the test set
 
 x = np.loadtxt(f"datasets/k_set{set_id}.txt").reshape((-1, 60, 60))
 y = np.loadtxt(f"datasets/h_set{set_id}.txt").reshape((-1, 60, 60))
