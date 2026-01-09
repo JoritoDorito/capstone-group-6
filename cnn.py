@@ -251,4 +251,4 @@ if __name__ == "__main__":
     pred_test = model(z_test).detach().numpy()
     np.savetxt("pred_test.txt", pred_test.reshape((-1, 3600)))
 
-#hallo
+#hall
