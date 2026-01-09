@@ -14,7 +14,7 @@ class Model(nn.Module):
         self.conv5 = nn.Conv2d(6, 3, 7, padding='same')  # -> 100x100
         self.conv6 = nn.Conv2d(8, 4, 7, padding='same')  # -> 100x100
         self.conv7 = nn.Conv2d(4, 1, 5, padding='same')  # -> 100x100
-        self.relu = nn.ReLU()
+        self.relu = nn.ReLU() 
 
     def forward(self, x):
         x1 = self.relu(self.conv1(x))
@@ -37,7 +37,7 @@ class Model2(nn.Module):
         self.fc2 = nn.Linear(144, 144)
         self.fc3 = nn.Linear(144, 3600)
 
-    def forward(self, x):
+    def forward(self, x): 
         x = x.reshape((-1, 3600))
         x = self.relu(self.fc1(x))
         x = self.relu(self.fc2(x))
@@ -250,3 +250,5 @@ if __name__ == "__main__":
     np.savetxt("pred_train.txt", pred.detach().numpy().reshape((-1, 3600)))
     pred_test = model(z_test).detach().numpy()
     np.savetxt("pred_test.txt", pred_test.reshape((-1, 3600)))
+
+#hallo
